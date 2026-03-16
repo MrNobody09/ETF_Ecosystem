@@ -31,6 +31,13 @@ This repository includes a ready-to-use `.devcontainer` configuration.
    - install backend Python dependencies from `backend/requirements.txt`
    - install frontend npm dependencies
    - run backend tests (`pytest`)
+4. On container start, it automatically starts services directly (without nested Docker):
+   - FastAPI backend via `uvicorn api.main:app --host 0.0.0.0 --port 8000`
+   - Next.js frontend via `npm run dev -- -H 0.0.0.0 -p 3000`
+
+Logs are written to:
+- `.devcontainer/backend.log`
+- `.devcontainer/frontend.log`
 4. On container start, it automatically runs:
    ```bash
    docker compose up
