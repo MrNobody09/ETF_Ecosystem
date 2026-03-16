@@ -21,6 +21,25 @@ ETF Agent OS is a monorepo for an AI-powered ETF research platform with a FastAP
    npm install
    ```
 
+## Run in GitHub Codespaces / Dev Containers
+
+This repository includes a ready-to-use `.devcontainer` configuration.
+
+1. Open the repository in GitHub Codespaces (or any devcontainer-compatible IDE).
+2. Reopen in container when prompted.
+3. On first create, the container will automatically:
+   - install backend Python dependencies from `backend/requirements.txt`
+   - install frontend npm dependencies
+   - run backend tests (`pytest`)
+4. On container start, it automatically runs:
+   ```bash
+   docker compose up
+   ```
+
+Forwarded ports:
+- `3000` for the frontend
+- `8000` for the backend
+
 ## Run with Docker
 
 From the `etf-agent-os` directory:
