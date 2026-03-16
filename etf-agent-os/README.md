@@ -38,6 +38,10 @@ This repository includes a ready-to-use `.devcontainer` configuration.
 Logs are written to:
 - `.devcontainer/backend.log`
 - `.devcontainer/frontend.log`
+4. On container start, it automatically runs:
+   ```bash
+   docker compose up
+   ```
 
 Forwarded ports:
 - `3000` for the frontend

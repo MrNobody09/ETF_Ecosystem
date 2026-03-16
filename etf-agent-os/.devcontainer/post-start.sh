@@ -19,3 +19,4 @@ else
   nohup bash -lc "cd '$REPO_DIR/frontend' && npm run dev -- -H 0.0.0.0 -p 3000" \
     > "$REPO_DIR/.devcontainer/frontend.log" 2>&1 &
 fi
+nohup docker compose up > .devcontainer/compose.log 2>&1 &
